@@ -1,0 +1,61 @@
+{
+  "enabled": true,
+  "description": "Custom metadata extraction rules for RAG system",
+  "rules": [
+    {
+      "field": "assignment_type",
+      "type": "filename_pattern",
+      "description": "Detect assignment type from filename",
+      "patterns": [
+        {"match": "midterm", "value": "midterm"},
+        {"match": "final", "value": "final"},
+        {"match": "homework", "value": "homework"},
+        {"match": "hw", "value": "homework"},
+        {"match": "project", "value": "project"},
+        {"match": "lab", "value": "lab"}
+      ]
+    },
+    {
+      "field": "author",
+      "type": "filename_contains",
+      "description": "Extract author from filename (case-sensitive)",
+      "patterns": [
+        {"match": "Beach", "value": "Shaun Beach"},
+        {"match": "Shaun", "value": "Shaun Beach"}
+      ]
+    },
+    {
+      "field": "doc_category",
+      "type": "filename_pattern",
+      "description": "Categorize documents",
+      "patterns": [
+        {"match": "checkpoint", "value": "checkpoint"},
+        {"match": "beach", "value": "student_work"},
+        {"match": "shaun", "value": "student_work"}
+      ]
+    },
+    {
+      "field": "week",
+      "type": "regex",
+      "description": "Extract week number (e.g., week_03, week3)",
+      "regex": "week[_\\s]?(\\d+)",
+      "source": "filename"
+    },
+    {
+      "field": "module",
+      "type": "regex",
+      "description": "Extract module number (e.g., module_05)",
+      "regex": "module[_\\s]?(\\d+)",
+      "source": "filename"
+    },
+    {
+      "field": "course",
+      "type": "path_contains",
+      "description": "Extract course code from path",
+      "patterns": [
+        {"match": "CMPINF_2100", "value": "CMPINF 2100"},
+        {"match": "INFSCI", "value": "Information Science"}
+      ]
+    }
+  ]
+}

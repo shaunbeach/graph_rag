@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# RAG System - vector databases and user configs
+# These are user-specific and should not be committed
+chroma_db/
+*.db
+*.index
+.rag_metadata.json
+code_graph.db
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Node.js (for dashboard)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Internal developer guides (not needed for users)
+START_HERE.md
+dashboard/GIT-COMMIT-GUIDE.md
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archive/backup files
+_archive/
+*.bak
+*.backup
+
+# Dashboard PID files (process tracking)
+dashboard/.dashboard_pid
+dashboard/.dashboard_pids
