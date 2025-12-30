@@ -2,26 +2,26 @@
 
 A flexible, production-ready RAG (Retrieval-Augmented Generation) system for document ingestion and semantic search. Perfect for class notes, research papers, code documentation, or any searchable knowledge base.
 
-## 🌟 Key Features
+## Key Features
 
 ### Core Capabilities
-- **🎯 Two Interfaces** - Web dashboard (Streamlit) or command-line (CLI)
-- **📁 Flexible Document Ingestion** - Process documents from any folder
-- **📄 Multiple File Formats** - Markdown, PDF, HTML, text, Jupyter notebooks
-- **🔍 Smart Filtering** - Pattern-based file filtering (`*.py`, `*.md`, `*.ipynb`, etc.)
-- **♻️ Incremental Updates** - Only re-processes modified files
-- **🗑️ Deduplication** - Remove duplicate documents by content or source
-- **🔎 Semantic Search** - Query documents using natural language
+- **Two Interfaces** - Web dashboard (Streamlit) or command-line (CLI)
+- **Flexible Document Ingestion** - Process documents from any folder
+- **Multiple File Formats** - Markdown, PDF, HTML, text, Jupyter notebooks
+- **Smart Filtering** - Pattern-based file filtering (`*.py`, `*.md`, `*.ipynb`, etc.)
+- **Incremental Updates** - Only re-processes modified files
+- **Deduplication** - Remove duplicate documents by content or source
+- **Semantic Search** - Query documents using natural language
 
 ### Advanced Features
-- **🕸️ Graph RAG** - Knowledge graph with AST parsing for code understanding
-- **🤖 Multi-Provider LLM** - Supports Ollama, OpenAI, Anthropic, Google Gemini, OpenRouter
-- **⚡ Dynamic Model Selection** - Automatically detects available models
-- **🎨 Modern Web Dashboard** - Streamlit-based UI with dark theme
-- **📊 Analytics** - Complete ingestion history and database statistics
-- **🚀 GPU Acceleration** - Automatic GPU detection for fast embeddings
+- **Graph RAG** - Knowledge graph with AST parsing for code understanding
+- **Multi-Provider LLM** - Supports Ollama, OpenAI, Anthropic, Google Gemini, OpenRouter
+- **Dynamic Model Selection** - Automatically detects available models
+- **Modern Web Dashboard** - Streamlit-based UI with dark theme
+- **Analytics** - Complete ingestion history and database statistics
+- **GPU Acceleration** - Automatic GPU detection for fast embeddings
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -50,11 +50,11 @@ cd dashboard
 Open **http://localhost:8501** in your browser.
 
 **Dashboard Features:**
-- 💬 Interactive chat with multiple LLM providers
-- 📤 Drag-and-drop document upload
-- 📊 System status and knowledge graph visualization
-- 🔧 Easy API key configuration
-- 📈 Ingestion analytics
+- Interactive chat with multiple LLM providers
+- Drag-and-drop document upload
+- System status and knowledge graph visualization
+- Easy API key configuration
+- Ingestion analytics
 
 #### Option 2: Command Line (For Power Users)
 
@@ -69,7 +69,7 @@ rag query "what is machine learning?"
 rag status
 ```
 
-## 📚 CLI Documentation
+## CLI Documentation
 
 ### Available Commands
 
@@ -148,7 +148,7 @@ rag deduplicate --by-content --dry-run
 rag info
 ```
 
-## 🕸️ Graph RAG (Knowledge Graph)
+## Graph RAG (Knowledge Graph)
 
 Graph RAG automatically builds a knowledge graph during ingestion:
 
@@ -171,7 +171,7 @@ rag query "how does the authentication system work?"
 
 **Learn More:** See [docs/WHAT_IS_GRAPH_RAG.md](docs/WHAT_IS_GRAPH_RAG.md) for a beginner-friendly explanation.
 
-## 🤖 Multi-Provider LLM Support
+## Multi-Provider LLM Support
 
 The system supports 5 LLM providers:
 
@@ -216,7 +216,7 @@ Or configure via the dashboard: Settings → API Keys → Save
 
 **Dynamic Model Detection:** The system automatically detects available models for each provider—no hardcoded lists!
 
-## 🎓 Use Cases
+## Use Cases
 
 ### 1. Study Notes for Exams
 
@@ -265,7 +265,7 @@ rag query "data preprocessing steps"
 rag query "model training approach"
 ```
 
-## 🗂️ File Structure
+## File Structure
 
 ```
 ~/.rag_system/              # Default workspace (configurable)
@@ -276,7 +276,7 @@ rag query "model training approach"
 └── image_store/            # Extracted PDF images (if enabled)
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Custom Workspace
 
@@ -351,7 +351,7 @@ rag ingest ~/Personal/notes/ --workspace ~/personal_rag
 rag query "project timeline" --workspace ~/work_rag
 ```
 
-## 📊 Web Dashboard Features
+## Web Dashboard Features
 
 ### Chat Tab
 - Select LLM provider (Ollama, OpenAI, Anthropic, Google, OpenRouter)
@@ -376,7 +376,7 @@ rag query "project timeline" --workspace ~/work_rag
 - Ollama status and available models
 - File tracking information
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### No results found
 
@@ -425,7 +425,7 @@ pip install -r streamlit_app/requirements.txt
 ./start_dashboard.sh
 ```
 
-## 📊 Performance
+## Performance
 
 - **Initial Ingestion:** ~3 seconds per file (includes embedding generation)
 - **Incremental Updates:** Only processes new/modified files (major speedup)
@@ -433,7 +433,7 @@ pip install -r streamlit_app/requirements.txt
 - **Database Size:** ~1MB per 100 documents (approximate)
 - **GPU Support:** Automatic detection and usage for embeddings
 
-## 🔒 Privacy
+## Privacy
 
 All data is stored locally on your machine:
 - Vector embeddings: `~/.rag_system/vector_store/`
@@ -443,7 +443,7 @@ All data is stored locally on your machine:
 
 **No data is sent to external servers** (except when using cloud LLM providers with your API keys).
 
-## 📖 Complete Documentation
+## Complete Documentation
 
 - **[Quick Start Guide](docs/QUICK_START.md)** - Get started in 5 minutes
 - **[Installation Guide](docs/INSTALLATION.md)** - Detailed installation instructions
@@ -468,15 +468,11 @@ All data is stored locally on your machine:
 pytest
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## 📝 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with:
 - [LangChain](https://github.com/langchain-ai/langchain) - LLM framework
@@ -487,14 +483,10 @@ Built with:
 - [Rich](https://rich.readthedocs.io/) - Terminal formatting
 - [NetworkX](https://networkx.org/) - Knowledge graph
 
-## 📧 Support
+## Support
 
 - **Issues:** [GitHub Issues](https://github.com/yourusername/rag-system/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/yourusername/rag-system/discussions)
 - **Documentation:** See `docs/` directory
 
----
 
-**Happy RAGging!** 🚀
-
-Made with ❤️ for the community
